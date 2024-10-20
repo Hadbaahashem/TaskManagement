@@ -9,7 +9,7 @@ import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 const App = () => {
   return (
-    <div className="bg-gray-900 text-white h-screen p-2 relative">
+    <div className="bg-gray-900 text-white min-h-screen p-2 relative overflow-auto ">
       <Router>
         <Routes>
           <Route exact path="/" element={<Home />}>

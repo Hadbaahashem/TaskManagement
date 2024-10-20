@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { IoMdAdd } from "react-icons/io";
@@ -26,8 +26,9 @@ const Cards = ({ home, setInputDiv }) => {
       status: "Complete",
     },
   ];
+
   return (
-    <div className="grid grid-cols-3 gap-4 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
       {data.map((items, index) => (
         <div
           key={index}
@@ -41,7 +42,7 @@ const Cards = ({ home, setInputDiv }) => {
             <button
               className={`${
                 items.status === "Incomplete" ? "bg-red-400" : "bg-green-700"
-              } bg-red-400 p-2  rounded`}
+              } p-2  rounded`}
             >
               {items.status}
             </button>
@@ -62,7 +63,7 @@ const Cards = ({ home, setInputDiv }) => {
           onClick={() => setInputDiv("fixed")}
         >
           <IoMdAdd className="text-5xl" />
-          <h2 className="text-2xlmt-4">Add Task</h2>
+          <h2 className="text-2xl mt-4">Add Task</h2>
         </button>
       )}
     </div>
